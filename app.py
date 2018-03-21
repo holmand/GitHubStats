@@ -21,7 +21,8 @@ for repo in g.get_user().get_repos():
     # look to see if we already have the repo in our output file.  We do this because
     # Github API limits us to 5000 requests/hour.
     print(repo.name)
-    if s.find(repo.name) != -1:
+    name_as_bytes = str.encode(repo.name)
+    if s.find(name_as_bytes) != -1:
         message = "We already processed " + repo.name
         print(message)
     else:
