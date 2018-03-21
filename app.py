@@ -8,7 +8,6 @@ import sys, getopt, mmap, getpass
 username = input("Username:")
 password = getpass.getpass("GitHub Password")
 accessToken = input("GitHub access token:")
-print("Got", username, password, accessToken)
 g = Github(username, password)
 g = Github(accessToken)
 
