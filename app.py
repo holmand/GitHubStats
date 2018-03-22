@@ -5,7 +5,7 @@ import sys, getopt, mmap, getpass
 
 # First create a Github instance:
 # using username and password and access token
-username = input("Username:")
+username = input("GitHub Username:")
 password = getpass.getpass("GitHub Password")
 accessToken = input("GitHub access token:")
 g = Github(username, password)
